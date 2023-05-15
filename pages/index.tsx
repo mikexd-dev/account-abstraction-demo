@@ -23,8 +23,8 @@ export default function Home() {
     address
   );
 
-  console.log(nft, "nft");
-  console.log(ownedNfts, "ownedNfts");
+  // console.log(nft, "nft");
+  // console.log(ownedNfts, "ownedNfts");
   return (
     <div className={styles.container}>
       <main className={styles.main}>

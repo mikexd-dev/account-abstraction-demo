@@ -1,4 +1,4 @@
-import { ConnectWallet } from "@thirdweb-dev/react";
+import { ConnectWallet, Web3Button } from "@thirdweb-dev/react";
 import type { NextPage } from "next";
 import styles from "../styles/Home.module.css";
 
@@ -17,7 +17,15 @@ const Home: NextPage = () => {
         </p>
 
         <div className={styles.connect}>
-          <ConnectWallet />
+          {/* <ConnectWallet /> */}
+
+          <Web3Button
+            contractAddress="0xE7bA081b6b54bbA6ECEB2a0079310E06373aea0E"
+            action={(contract) => contract.erc721.claim(1)}
+            onSuccess={() => alert("Claimed!")}
+          >
+            Claim NFT!
+          </Web3Button>
         </div>
 
         <div className={styles.grid}>

@@ -68,8 +68,15 @@ export default function Home() {
               alt={nft.metadata.description}
             />
             {address ? (
-              <>
+              <div>
+                <a
+                  href={`https://testnets.opensea.io/${address}`}
+                  target="_blank"
+                >
+                  View on OpenSea
+                </a>
                 <p>You own {ownedNfts?.[0]?.quantityOwned || "0"}</p>
+
                 <Web3Button
                   contractAddress={editionDropAddress}
                   action={(contract) =>
@@ -83,7 +90,7 @@ export default function Home() {
                 >
                   Claim!
                 </Web3Button>
-              </>
+              </div>
             ) : (
               <p>Login to claim!</p>
             )}

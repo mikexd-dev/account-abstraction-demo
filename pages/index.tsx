@@ -6,6 +6,7 @@ import {
   useNFT,
   useOwnedNFTs,
 } from "@thirdweb-dev/react";
+import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { editionDropAddress, editionDropTokenId } from "../const/yourDetails";
 
@@ -39,7 +40,7 @@ export default function Home() {
           <br /> <br />
           <div style={{ fontSize: "15px", textAlign: "center" }}>
             (Note: claiming takes a while, please be patient and a popup will
-            show up when it's done)
+            show up when its done)
           </div>
           <div
             style={{ fontSize: "15px", textAlign: "center", color: "yellow" }}
@@ -62,10 +63,10 @@ export default function Home() {
           "Loading..."
         ) : (
           <div className={styles.card}>
-            <img
+            <Image
               className={styles.nftImage}
-              src={nft.metadata.image}
-              alt={nft.metadata.description}
+              src={nft?.metadata.image || ""}
+              alt={nft?.metadata.description || ""}
             />
             {address ? (
               <div>

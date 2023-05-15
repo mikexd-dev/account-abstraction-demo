@@ -13,7 +13,7 @@
 }
 
 .title a {
-  color: #f213a4;
+  color: #51C878;
   text-decoration: none;
 }
 
@@ -36,7 +36,8 @@
 
 .connect {
   margin-bottom: 2rem;
-  width: 230px;
+  display: flex;
+  justify-content: center;
 }
 
 .description {
@@ -111,9 +112,18 @@
 .footer {
   border-color: #222;
 }
+
 .code {
   background: #111;
 }
+
 .logo img {
   filter: invert(1);
+}
+
+.nftImage {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  margin-bottom: 10px;
 }

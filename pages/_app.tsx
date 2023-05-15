@@ -2,6 +2,7 @@ import type { AppProps } from "next/app";
 import {
   ThirdwebProvider,
   localWallet,
+  metamaskWallet,
   smartWallet,
 } from "@thirdweb-dev/react";
 import "../styles/globals.css";
@@ -23,6 +24,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           gasless: true,
           // Local wallet as the only option for EOA
           personalWallets: [
+            // metamaskWallet(),
             localWallet({
               persist: true,
             }),
